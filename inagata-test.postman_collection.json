@@ -1,0 +1,319 @@
+{
+    "info": {
+        "_postman_id": "89481cea-0455-42f9-9116-7c1b8c8e8521",
+        "name": "Inagata-Test",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "20710138",
+        "_collection_link": "https://www.postman.com/dark-space-911607/workspace/inagata-test/collection/20710138-89481cea-0455-42f9-9116-7c1b8c8e8521?action=share&creator=20710138&source=collection_link"
+    },
+    "item": [
+        {
+            "name": "Register",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "name",
+                            "value": "nico",
+                            "type": "text"
+                        },
+                        {
+                            "key": "email",
+                            "value": "dahyunisme@gmail.com",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "nicoco1173",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password_confirmation",
+                            "value": "nicoco1173",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "{{URL}}/api/register",
+                    "host": ["{{URL}}"],
+                    "path": ["api", "register"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "email",
+                            "value": "dahyunisme@gmail.com",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "nicoco1173",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "{{URL}}/api/login",
+                    "host": ["{{URL}}"],
+                    "path": ["api", "login"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Logout",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "2|1QLs0PIgZ0u9XKOWHVFlPPKN4J2jd1n5IvdD0YUQ",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": []
+                },
+                "url": {
+                    "raw": "{{URL}}/api/logout",
+                    "host": ["{{URL}}"],
+                    "path": ["api", "logout"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Users Data",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "2|AUNkn6GfkBiZ0YHdTbAf4byxsGf9RS16dyBcC4j3",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": []
+                },
+                "url": {
+                    "raw": "{{URL}}/api/profile",
+                    "host": ["{{URL}}"],
+                    "path": ["api", "profile"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Users Data",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "2|AUNkn6GfkBiZ0YHdTbAf4byxsGf9RS16dyBcC4j3",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"johndoe@example.com\",\r\n    \"password\": \"newpassword\",\r\n    \"password_confirmation\": \"newpassword\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{URL}} /api/user/1",
+                    "host": ["{{URL}} "],
+                    "path": ["api", "user", "1"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create Keuangan",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "2|AUNkn6GfkBiZ0YHdTbAf4byxsGf9RS16dyBcC4j3",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "user_id",
+                            "value": "1",
+                            "type": "text"
+                        },
+                        {
+                            "key": "category",
+                            "value": "Uang Masuk",
+                            "type": "text"
+                        },
+                        {
+                            "key": "amount",
+                            "value": "100000",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "{{URL}}/api/keuangan",
+                    "host": ["{{URL}}"],
+                    "path": ["api", "keuangan"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Keuangan",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "2|AUNkn6GfkBiZ0YHdTbAf4byxsGf9RS16dyBcC4j3",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n  \"user_id\": 1,\r\n  \"category\": \"Uang Keluar\",\r\n  \"amount\": 100000\r\n}\r\n",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{URL}}/api/keuangan/1",
+                    "host": ["{{URL}}"],
+                    "path": ["api", "keuangan", "1"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Users Data Dan Keuangan",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "2|AUNkn6GfkBiZ0YHdTbAf4byxsGf9RS16dyBcC4j3",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": []
+                },
+                "url": {
+                    "raw": "{{URL}}/api/getkeuangan",
+                    "host": ["{{URL}}"],
+                    "path": ["api", "getkeuangan"]
+                }
+            },
+            "response": []
+        }
+    ]
+}
